@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurso 2</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+<script>
+  Vue.createApp({
+    data(){
+      return {
+        list:['hello','world','dell','lee'],
+        value:''
+      }
+    },
+    methods:{
+       handleAddItem(){
+         if(this.value){
+          this.list.push(this.value)
+          this.value = ''
+         }else{
+           alert("请输入添加项")
+         }
+   
+       }
+    },
+    template:`
+     <div>
+      <input  v-model="value">
+      <button @click="handleAddItem"> add</button>
+      <ul>
+        <li v-for="(item,index) in  list" :key="index">{{item}}</li>
+      </ul
+      </div>
+    `
+  }).mount('#root')
+</script>
+</html>
