@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurso 2</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+<script>
+  Vue.createApp({
+    data(){
+      return {
+        content:'hello Kurso 2',
+        isShow:true
+      }
+    },
+    methods:{
+      handleBtuClick(){
+        this.content = this.content.split('').reverse().join(''); 
+      },
+      handleBtuClickIsShow(){
+        if(this.isShow){
+          this.isShow = false
+        }else{
+          this.isShow = true
+        }
+      }
+    },
+    template:`
+      <div>
+        <span v-show="isShow">{{content}}</span>
+        <button @click="handleBtuClick">reverso </button>
+        <button @click="handleBtuClickIsShow">show/hide </button>
+      </div
+    `
+  }).mount('#root')
+</script>
+</html>
