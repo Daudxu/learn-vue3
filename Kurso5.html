@@ -33,6 +33,10 @@
     mounted(){
       console.log('mounted')
     },
+   // 在组建内容被渲染到页面之后自动执行的函数
+    beforeUpdate(){
+      console.log('beforeUpdate')
+    },
     template:"<div>{{message}}</div>"
   })
   // vm 代表的就是vue应用的根组件
