@@ -33,9 +33,21 @@
     mounted(){
       console.log('mounted')
     },
-   // 在组建内容被渲染到页面之后自动执行的函数
+   // 当数据发生变化时会立即自动执行的函数
     beforeUpdate(){
       console.log('beforeUpdate')
+    },
+    // 当数据发生变化，页面重新渲染后，会自动执行的函数
+    updated(){
+      console.log('updated')
+    },
+    // 当vue 应用失效是，自动执行函数
+    beforeUnmount(){
+      console.log('beforeUnmount')
+    },
+    // 当vue 应用时，且dom 安全销毁之后，自动执行的函数
+    unmounted(){
+      console.log('unmounted')
     },
     template:"<div>{{message}}</div>"
   })
