@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurso 6</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+<script>
+  const app = Vue.createApp({
+    data(){
+      return {
+        message:'hello world',
+        isShow:true,
+        html:"<h1>nihao</h1>",
+        disable:true
+      }
+    },
+    template:`
+    <div>
+    <div v-once>{{message}}</div>
+    <div v-if='isShow'>{{message}}</div>
+    <div v-show='isShow'>{{message}}</div>
+    <div v-html="html"> </div>
+    <input v-bind:disabled="disable">
+    </div>
+    `
+  })
+
+  const vm = app.mount('#root')
+</script>
+</html>
