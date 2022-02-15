@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurso 8</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+<script>
+ const app = Vue.createApp({
+    data(){
+      return {
+        message:'hello world',
+        show:false,
+        conditionOne:false,
+        conditionTwo:true,
+      }
+    },
+    template:`
+    <div> 
+     <div v-show="show">{{ message }}</div>
+     <div v-if="conditionOne">if</div>
+     <div v-else-if="conditionTwo">else-if</div>
+     <div v-else>else</div>
+    </div>
+    `
+  })
+
+  const vm = app.mount('#root')
+</script>
+</html>
