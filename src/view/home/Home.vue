@@ -11,7 +11,7 @@
       <router-link to="/example02">ref 和 reactive</router-link>
       <router-link to="/example03">vue2 响应式原理</router-link>
       <router-link to="/example04">vue3 响应式原理</router-link>
-      <router-link to="/example05">example05</router-link>
+      <router-link to="/example05">setup 两个注意点</router-link>
       <router-link to="/example06">example06</router-link>
       <router-link to="/example07">example07</router-link>
       <router-link to="/example08">example08</router-link>

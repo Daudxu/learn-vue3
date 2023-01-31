@@ -1,35 +1,22 @@
 <template>
-   <p>{{ person.name }}</p>
-   <p>{{ person.age }}</p>
-   <p v-show="person.sex">{{ person.sex }}</p>
-   <button @click="addSex">添加一个sex属性</button>
-   <button @click="deleteName">删除name属性</button>
-   <button @click="updateHobby">修改第一个属性</button>
+   <p></p>
+   <Demo  msg="test" @hello="showHelloMsg" school="web3Dev"> >
+      <template v-slot:sasa>
+         <h1> slot</h1>
+      </template>
+  </Demo>
 </template>
 
 <script>
-
+import Demo from "./Demo.vue"
 export default {
   name:'App',
-  data() {
-    return {
-      person: {
-        name: "张三",
-        age: 18,
-        hobby: ["学习", "吃饭"]
-      }
+  components:{Demo},
+  setup(){
+    function showHelloMsg(){
+      alert("父组件事件")
     }
-  },
-  methods: {
-    addSex(){
-      this.$set(this.person, "sex", "女")
-    },
-    deleteName(){
-      this.$delete(this.person, "sex", "女")
-    },
-    updateHobby(){
-      this.$set(this.person.hobby, 0, "逛街")
-    }
+    return { showHelloMsg }
   }
 }
 </script>
