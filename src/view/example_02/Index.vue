@@ -26,12 +26,19 @@ export default {
       job.value.salary = 60
     }
 
+    function cheageInfo1(){
+      job1.type = "UI dec"
+      job1.salary = 60
+    }
+
     return {
         title,
         age,
         addDom,
         job,
-        cheageInfo
+        job1,
+        cheageInfo,
+        cheageInfo1
     }
   }
 }
@@ -41,7 +48,10 @@ export default {
    <p>{{ title }}</p>
    <p>{{ age }}</p>
    <p>{{ job }}</p>
+   <p>{{ job1 }}</p>
    <button @click="addDom">click</button>
+   <button @click="cheageInfo">cheageInfo</button>
+   <button @click="cheageInfo1">cheageInfo1</button>
 </template>
 
 <style lang="stylus" scoped>

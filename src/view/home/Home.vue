@@ -8,9 +8,9 @@
     </div>
     <div class="notes-list">
       <router-link to="/example01">初始setup</router-link>
-      <router-link to="/example02">example02</router-link>
-      <router-link to="/example03">example03</router-link>
-      <router-link to="/example04">example04</router-link>
+      <router-link to="/example02">ref 和 reactive</router-link>
+      <router-link to="/example03">vue2 响应式原理</router-link>
+      <router-link to="/example04">vue3 响应式原理</router-link>
       <router-link to="/example05">example05</router-link>
       <router-link to="/example06">example06</router-link>
       <router-link to="/example07">example07</router-link>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let p = {}
+        let person = {
+            name:"张三",
+            age: 18
+        }
+        // vue2 实现方式响应式
+        Object.defineProperty(p, 'name', {
+            configurable: true,
+            get() {
+                return person.name
+            },
+            set(value){
+                person.name = value
+            }
+        })
+        Object.defineProperty(p, 'age', {
+            configurable: true,
+            get() {
+                return person.name
+            },
+            set(value){
+                person.age = value
+            }
+        })
+
+        // vue3 实现方式响应式
+        const p = new Proxy(person, {
+            get(target, propName){
+                return target[propName]
+            },
+            set(target, propName, value){
+                target[propName] = value
+            },
+            deleteProperty(target, propName, value){
+                return delete target[propName]
+            }
+        })
+        
+        let obj = {a:1,b:2}
+        // Object.defineProperties(obj,"c",{
+        //     get(){
+        //         return 3
+        //     }
+        // })
+        // Object.defineProperties(obj,"c",{
+        //     get(){
+        //         return 3
+        //     }
+        // })
+
+        // const a = Reflect.defineProperty(obj,'c',{
+        //     get(){
+        //         return 3
+        //     }
+        // })
+        // console.log(a)
+
+        // const b = Reflect.defineProperty(obj,'c',{
+        //     get(){
+        //         return 4
+        //     }
+        // })
+        // console.log(b)
+         
+        // if(x2){
+        //     console.log("成功")
+        // }else{
+        //     console.log("失败")
+        // }
+
+
+
+
+    </script>
+</body>
+</html>

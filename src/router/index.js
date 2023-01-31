@@ -18,6 +18,41 @@ const routes = [
     component: () => import("../view/example_02/Index.vue"),
   },
   {
+    path: "/example03",
+    name: 'example03', 
+    component: () => import("../view/example_03/Index.vue"),
+  },
+  {
+    path: "/example04",
+    name: 'example04', 
+    component: () => import("../view/example_04/Index.vue"),
+  },
+  {
+    path: "/example05",
+    name: 'example05', 
+    component: () => import("../view/example_05/Index.vue"),
+  },
+  {
+    path: "/example06",
+    name: 'example06', 
+    component: () => import("../view/example_06/Index.vue"),
+  },
+  {
+    path: "/example07",
+    name: 'example07', 
+    component: () => import("../view/example_07/Index.vue"),
+  },
+  {
+    path: "/example08",
+    name: 'example08', 
+    component: () => import("../view/example_08/Index.vue"),
+  },
+  {
+    path: "/example09",
+    name: 'example09', 
+    component: () => import("../view/example_09/Index.vue"),
+  },
+  {
     path: "/list",
     name: 'list', 
     component: () => import("../view/list/List.vue"),
